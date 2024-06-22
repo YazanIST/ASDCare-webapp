@@ -2,10 +2,8 @@ import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/parent_main_flow/chat/chat_thread_component/chat_thread_component_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'chat_model.dart';
 export 'chat_model.dart';
@@ -73,7 +71,7 @@ class _ChatWidgetState extends State<ChatWidget> {
             },
           ),
           title: Align(
-            alignment: AlignmentDirectional(-1.0, 0.0),
+            alignment: const AlignmentDirectional(-1.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +101,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                     final textFetchUsernameByEmailAndUsertypeResponse =
                         snapshot.data!;
                     return Text(
-                      '${textFetchUsernameByEmailAndUsertypeResponse.bodyText}',
+                      textFetchUsernameByEmailAndUsertypeResponse.bodyText,
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -131,12 +129,12 @@ class _ChatWidgetState extends State<ChatWidget> {
               ],
             ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
         body: Align(
-          alignment: AlignmentDirectional(0.0, 0.0),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: wrapWithModel(
             model: _model.chatThreadComponentModel,
             updateCallback: () => setState(() {}),

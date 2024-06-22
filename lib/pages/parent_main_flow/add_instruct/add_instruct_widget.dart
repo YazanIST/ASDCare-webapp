@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_instruct_model.dart';
 export 'add_instruct_model.dart';
@@ -54,7 +53,7 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
       height: 400.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(24.0),
@@ -66,7 +65,7 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Text(
               'New Doctor Instruction',
               textAlign: TextAlign.center,
@@ -79,10 +78,10 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, -1.0),
+            alignment: const AlignmentDirectional(0.0, -1.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(12.0, 24.0, 12.0, 24.0),
-              child: Container(
+              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 24.0, 12.0, 24.0),
+              child: SizedBox(
                 width: double.infinity,
                 child: TextFormField(
                   controller: _model.newInstructionTextController,
@@ -125,7 +124,7 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     filled: true,
-                    contentPadding: EdgeInsets.all(24.0),
+                    contentPadding: const EdgeInsets.all(24.0),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
@@ -143,7 +142,7 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
           ),
           FFButtonWidget(
             onPressed: () async {
-              var _shouldSetState = false;
+              var shouldSetState = false;
               _model.apiResultifm = await ChildMonitoringServiceGroup
                   .addDoctorInstructionCall
                   .call(
@@ -152,10 +151,10 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
                 authToken: FFAppState().authToken,
               );
 
-              _shouldSetState = true;
+              shouldSetState = true;
               if ((_model.apiResultifm?.succeeded ?? true)) {
                 Navigator.pop(context, true);
-                if (_shouldSetState) setState(() {});
+                if (shouldSetState) setState(() {});
                 return;
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
@@ -166,23 +165,23 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
                         color: FlutterFlowTheme.of(context).info,
                       ),
                     ),
-                    duration: Duration(milliseconds: 4000),
+                    duration: const Duration(milliseconds: 4000),
                     backgroundColor: FlutterFlowTheme.of(context).error,
                   ),
                 );
                 Navigator.pop(context, false);
-                if (_shouldSetState) setState(() {});
+                if (shouldSetState) setState(() {});
                 return;
               }
 
-              if (_shouldSetState) setState(() {});
+              if (shouldSetState) setState(() {});
             },
             text: 'Add',
             options: FFButtonOptions(
               width: 150.0,
               height: 50.0,
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
               color: FlutterFlowTheme.of(context).primary,
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                     fontFamily: 'Readex Pro',
@@ -190,7 +189,7 @@ class _AddInstructWidgetState extends State<AddInstructWidget> {
                     letterSpacing: 0.0,
                   ),
               elevation: 1.0,
-              borderSide: BorderSide(
+              borderSide: const BorderSide(
                 color: Colors.transparent,
                 width: 1.0,
               ),

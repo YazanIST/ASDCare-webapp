@@ -3,13 +3,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'doctor_register_model.dart';
 export 'doctor_register_model.dart';
 
@@ -61,8 +57,8 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -81,8 +77,8 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -100,15 +96,15 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           TiltEffect(
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: Offset(-0.349, 0),
-            end: Offset(0, 0),
+            begin: const Offset(-0.349, 0),
+            end: const Offset(0, 0),
           ),
         ],
       ),
@@ -135,11 +131,11 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
             gradient: LinearGradient(
               colors: [
                 FlutterFlowTheme.of(context).primaryBackground,
-                Color(0xFFE5F1FB)
+                const Color(0xFFE5F1FB)
               ],
-              stops: [0.0, 1.0],
-              begin: AlignmentDirectional(0.0, -1.0),
-              end: AlignmentDirectional(0, 1.0),
+              stops: const [0.0, 1.0],
+              begin: const AlignmentDirectional(0.0, -1.0),
+              end: const AlignmentDirectional(0, 1.0),
             ),
           ),
           child: Column(
@@ -159,7 +155,7 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                       animationsMap['textOnPageLoadAnimation1']!),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(35.0, 12.0, 35.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(35.0, 12.0, 35.0, 0.0),
                     child: Text(
                       'Keeping track of your children\'s progress made easier than ever!',
                       textAlign: TextAlign.center,
@@ -173,24 +169,24 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                 ],
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 16.0, 16.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 16.0, 16.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        child: SizedBox(
                           width: 450.0,
                           child: TextFormField(
                             controller: _model.usernameTextController,
                             focusNode: _model.usernameFocusNode,
                             autofocus: true,
-                            autofillHints: [AutofillHints.username],
+                            autofillHints: const [AutofillHints.username],
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Username',
@@ -231,7 +227,7 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              contentPadding: EdgeInsets.all(24.0),
+                              contentPadding: const EdgeInsets.all(24.0),
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -253,14 +249,14 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        child: SizedBox(
                           width: 450.0,
                           child: TextFormField(
                             controller: _model.emailAddressTextController,
                             focusNode: _model.emailAddressFocusNode,
                             autofocus: false,
-                            autofillHints: [AutofillHints.email],
+                            autofillHints: const [AutofillHints.email],
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Email',
@@ -301,7 +297,7 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              contentPadding: EdgeInsets.all(24.0),
+                              contentPadding: const EdgeInsets.all(24.0),
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -318,14 +314,14 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        child: SizedBox(
                           width: 450.0,
                           child: TextFormField(
                             controller: _model.passwordTextController,
                             focusNode: _model.passwordFocusNode,
                             autofocus: false,
-                            autofillHints: [AutofillHints.password],
+                            autofillHints: const [AutofillHints.password],
                             obscureText: !_model.passwordVisibility,
                             decoration: InputDecoration(
                               labelText: 'Password',
@@ -364,7 +360,7 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              contentPadding: EdgeInsets.all(24.0),
+                              contentPadding: const EdgeInsets.all(24.0),
                               suffixIcon: InkWell(
                                 onTap: () => setState(
                                   () => _model.passwordVisibility =
@@ -394,14 +390,14 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        child: SizedBox(
                           width: 450.0,
                           child: TextFormField(
                             controller: _model.confirmPasswordTextController,
                             focusNode: _model.confirmPasswordFocusNode,
                             autofocus: false,
-                            autofillHints: [AutofillHints.password],
+                            autofillHints: const [AutofillHints.password],
                             obscureText: !_model.confirmPasswordVisibility,
                             decoration: InputDecoration(
                               labelText: 'Confirm Password',
@@ -440,7 +436,7 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              contentPadding: EdgeInsets.all(24.0),
+                              contentPadding: const EdgeInsets.all(24.0),
                               suffixIcon: InkWell(
                                 onTap: () => setState(
                                   () => _model.confirmPasswordVisibility =
@@ -470,13 +466,13 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 7.0),
                           child: FFButtonWidget(
                             onPressed: () async {
-                              var _shouldSetState = false;
+                              var shouldSetState = false;
                               if (_model.passwordTextController.text ==
                                   _model.confirmPasswordTextController.text) {
                                 _model.pincode =
@@ -484,7 +480,7 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                   email: _model.emailAddressTextController.text,
                                 );
 
-                                _shouldSetState = true;
+                                shouldSetState = true;
                                 if ((_model.pincode?.succeeded ?? true)) {
                                   context.pushNamed(
                                     'VerifyDoctorRegister',
@@ -517,16 +513,16 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                               FlutterFlowTheme.of(context).info,
                                         ),
                                       ),
-                                      duration: Duration(milliseconds: 4000),
+                                      duration: const Duration(milliseconds: 4000),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context).error,
                                     ),
                                   );
-                                  if (_shouldSetState) setState(() {});
+                                  if (shouldSetState) setState(() {});
                                   return;
                                 }
 
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
@@ -538,24 +534,24 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                             FlutterFlowTheme.of(context).info,
                                       ),
                                     ),
-                                    duration: Duration(milliseconds: 4000),
+                                    duration: const Duration(milliseconds: 4000),
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).error,
                                   ),
                                 );
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               }
 
-                              if (_shouldSetState) setState(() {});
+                              if (shouldSetState) setState(() {});
                             },
                             text: 'Create Account',
                             options: FFButtonOptions(
                               width: 230.0,
                               height: 52.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -566,7 +562,7 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -586,9 +582,9 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -598,11 +594,11 @@ class _DoctorRegisterWidgetState extends State<DoctorRegisterWidget>
                             options: FFButtonOptions(
                               width: 230.0,
                               height: 52.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0x5088B5C4),
+                              color: const Color(0x5088B5C4),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(

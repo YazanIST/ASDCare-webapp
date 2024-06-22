@@ -4,10 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/pages/parent_main_flow/chat/message_component/message_component_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'chat_thread_component_model.dart';
 export 'chat_thread_component_model.dart';
 
@@ -104,10 +101,10 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                 List<MessagesRecord> listViewMessagesRecordList =
                     snapshot.data!;
                 if (listViewMessagesRecordList.isEmpty) {
-                  return EmptyComponentWidget();
+                  return const EmptyComponentWidget();
                 }
                 return ListView.builder(
-                  padding: EdgeInsets.fromLTRB(
+                  padding: const EdgeInsets.fromLTRB(
                     0,
                     12.0,
                     0,
@@ -120,7 +117,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                     final listViewMessagesRecord =
                         listViewMessagesRecordList[listViewIndex];
                     return Container(
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: MessageComponentWidget(
                         key: Key(
                             'Keywo5_${listViewIndex}_of_${listViewMessagesRecordList.length}'),
@@ -136,7 +133,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
             width: double.infinity,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primaryBackground,
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   blurRadius: 3.0,
                   color: Color(0x33000000),
@@ -154,7 +151,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                   key: _model.formKey,
                   autovalidateMode: AutovalidateMode.disabled,
                   child: Padding(
-                    padding: EdgeInsets.all(12.0),
+                    padding: const EdgeInsets.all(12.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -179,9 +176,9 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                           child: Stack(
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 0.0, 0.0),
-                                child: Container(
+                                child: SizedBox(
                                   width: double.infinity,
                                   child: TextFormField(
                                     controller: _model.textController,
@@ -283,7 +280,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                             BorderRadius.circular(24.0),
                                       ),
                                       contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               16.0, 16.0, 56.0, 16.0),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -302,9 +299,9 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 6.0, 4.0),
                                   child: FlutterFlowIconButton(
                                     borderRadius: 20.0,

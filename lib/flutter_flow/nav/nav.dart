@@ -1,19 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
 
 import '/index.dart';
-import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -38,27 +31,27 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => OnboardingWidget(),
+      errorBuilder: (context, state) => const OnboardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => OnboardingWidget(),
+          builder: (context, _) => const OnboardingWidget(),
         ),
         FFRoute(
           name: 'Onboarding',
           path: '/onboarding',
-          builder: (context, params) => OnboardingWidget(),
+          builder: (context, params) => const OnboardingWidget(),
         ),
         FFRoute(
           name: 'DoctorLogin',
           path: '/doctorLogin',
-          builder: (context, params) => DoctorLoginWidget(),
+          builder: (context, params) => const DoctorLoginWidget(),
         ),
         FFRoute(
           name: 'DoctorRegister',
           path: '/doctorRegister',
-          builder: (context, params) => DoctorRegisterWidget(),
+          builder: (context, params) => const DoctorRegisterWidget(),
         ),
         FFRoute(
           name: 'VerifyDoctorRegister',
@@ -85,12 +78,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'DoctorForgotPassword',
           path: '/doctorForgotPassword',
-          builder: (context, params) => DoctorForgotPasswordWidget(),
+          builder: (context, params) => const DoctorForgotPasswordWidget(),
         ),
         FFRoute(
           name: 'DoctorResetPassword',
           path: '/doctorResetPassword',
-          builder: (context, params) => DoctorResetPasswordWidget(),
+          builder: (context, params) => const DoctorResetPasswordWidget(),
         ),
         FFRoute(
           name: 'Chat',
@@ -287,7 +280,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

@@ -3,12 +3,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import '/backend/schema/structs/index.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'doctor_login_model.dart';
 export 'doctor_login_model.dart';
@@ -55,8 +52,8 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
             curve: Curves.easeInOut,
             delay: 100.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -75,8 +72,8 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
             curve: Curves.easeInOut,
             delay: 150.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 30.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 30.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -94,15 +91,15 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
           TiltEffect(
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: Offset(-0.349, 0),
-            end: Offset(0, 0),
+            begin: const Offset(-0.349, 0),
+            end: const Offset(0, 0),
           ),
         ],
       ),
@@ -131,11 +128,11 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
             gradient: LinearGradient(
               colors: [
                 FlutterFlowTheme.of(context).primaryBackground,
-                Color(0xFFE5F1FB)
+                const Color(0xFFE5F1FB)
               ],
-              stops: [0.0, 1.0],
-              begin: AlignmentDirectional(0.0, -1.0),
-              end: AlignmentDirectional(0, 1.0),
+              stops: const [0.0, 1.0],
+              begin: const AlignmentDirectional(0.0, -1.0),
+              end: const AlignmentDirectional(0, 1.0),
             ),
           ),
           child: Column(
@@ -155,7 +152,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                       animationsMap['textOnPageLoadAnimation1']!),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(35.0, 12.0, 35.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(35.0, 12.0, 35.0, 0.0),
                     child: Text(
                       'Streamlining the care of your pediatric autism patients, made easier than ever!',
                       textAlign: TextAlign.center,
@@ -169,10 +166,10 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                 ],
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 16.0, 16.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 15.0, 16.0, 16.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -180,14 +177,14 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        child: SizedBox(
                           width: 450.0,
                           child: TextFormField(
                             controller: _model.emailAddressTextController,
                             focusNode: _model.emailAddressFocusNode,
                             autofocus: true,
-                            autofillHints: [AutofillHints.email],
+                            autofillHints: const [AutofillHints.email],
                             obscureText: false,
                             decoration: InputDecoration(
                               labelText: 'Email',
@@ -228,7 +225,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              contentPadding: EdgeInsets.all(24.0),
+                              contentPadding: const EdgeInsets.all(24.0),
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -245,14 +242,14 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        child: SizedBox(
                           width: 450.0,
                           child: TextFormField(
                             controller: _model.passwordTextController,
                             focusNode: _model.passwordFocusNode,
                             autofocus: false,
-                            autofillHints: [AutofillHints.password],
+                            autofillHints: const [AutofillHints.password],
                             obscureText: !_model.passwordVisibility,
                             decoration: InputDecoration(
                               labelText: 'Password',
@@ -291,7 +288,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                 borderRadius: BorderRadius.circular(12.0),
                               ),
                               filled: true,
-                              contentPadding: EdgeInsets.all(24.0),
+                              contentPadding: const EdgeInsets.all(24.0),
                               suffixIcon: InkWell(
                                 onTap: () => setState(
                                   () => _model.passwordVisibility =
@@ -320,13 +317,13 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 7.0),
                           child: FFButtonWidget(
                             onPressed: () async {
-                              var _shouldSetState = false;
+                              var shouldSetState = false;
                               _model.apiResult6tf = await AuthServiceGroup
                                   .verifyUserInformationCall
                                   .call(
@@ -335,7 +332,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                 userType: 'DOCTOR',
                               );
 
-                              _shouldSetState = true;
+                              shouldSetState = true;
                               if ((_model.apiResult6tf?.succeeded ?? true)) {
                                 FFAppState().authToken =
                                     (_model.apiResult6tf?.bodyText ?? '');
@@ -345,7 +342,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                   authToken: FFAppState().authToken,
                                 );
 
-                                _shouldSetState = true;
+                                shouldSetState = true;
                                 if (((_model.children?.jsonBody ?? '')
                                                 .toList()
                                                 .map<EmailsAndNamesStruct?>(
@@ -353,9 +350,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                                         .maybeFromMap)
                                                 .toList()
                                             as Iterable<EmailsAndNamesStruct?>)
-                                        .withoutNulls
-                                        ?.length !=
-                                    0) {
+                                        .withoutNulls.isNotEmpty) {
                                   context.pushNamed(
                                     'Dashboard',
                                     queryParameters: {
@@ -369,14 +364,14 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                                 as Iterable<
                                                     EmailsAndNamesStruct?>)
                                             .withoutNulls
-                                            ?.first
-                                            ?.email,
+                                            .first
+                                            .email,
                                         ParamType.String,
                                       ),
                                     }.withoutNulls,
                                   );
 
-                                  if (_shouldSetState) setState(() {});
+                                  if (shouldSetState) setState(() {});
                                   return;
                                 } else {
                                   ScaffoldMessenger.of(context).showSnackBar(
@@ -388,12 +383,12 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                               FlutterFlowTheme.of(context).info,
                                         ),
                                       ),
-                                      duration: Duration(milliseconds: 4000),
+                                      duration: const Duration(milliseconds: 4000),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context).error,
                                     ),
                                   );
-                                  if (_shouldSetState) setState(() {});
+                                  if (shouldSetState) setState(() {});
                                   return;
                                 }
                               } else {
@@ -406,24 +401,24 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                             .primaryText,
                                       ),
                                     ),
-                                    duration: Duration(milliseconds: 4000),
+                                    duration: const Duration(milliseconds: 4000),
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).error,
                                   ),
                                 );
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               }
 
-                              if (_shouldSetState) setState(() {});
+                              if (shouldSetState) setState(() {});
                             },
                             text: 'Log In',
                             options: FFButtonOptions(
                               width: 230.0,
                               height: 52.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
@@ -434,7 +429,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -454,9 +449,9 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
@@ -466,11 +461,11 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                             options: FFButtonOptions(
                               width: 230.0,
                               height: 52.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0x5088B5C4),
+                              color: const Color(0x5088B5C4),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -490,9 +485,9 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 16.0, 0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () {
@@ -502,9 +497,9 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 20.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: Colors.transparent,
                               textStyle: FlutterFlowTheme.of(context)
@@ -515,7 +510,7 @@ class _DoctorLoginWidgetState extends State<DoctorLoginWidget>
                                     fontWeight: FontWeight.normal,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 2.0,
                               ),

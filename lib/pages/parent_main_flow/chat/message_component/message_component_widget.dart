@@ -6,8 +6,6 @@ import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'message_component_model.dart';
 export 'message_component_model.dart';
 
@@ -53,14 +51,14 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
       children: [
         if (widget.message?.senderType != 'DOCTOR')
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(0.0),
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,12 +69,12 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxWidth: 500.0,
                             ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context).alternate,
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 3.0,
                                   color: Color(0x33000000),
@@ -86,7 +84,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                                   ),
                                 )
                               ],
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(12.0),
                                 bottomRight: Radius.circular(12.0),
                                 topLeft: Radius.circular(0.0),
@@ -98,7 +96,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,7 +116,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                                   if (widget.message?.image != null &&
                                       widget.message?.image != '')
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 4.0),
                                       child: FlutterFlowMediaDisplay(
                                         path: widget.message!.image,
@@ -127,9 +125,9 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                                               BorderRadius.circular(8.0),
                                           child: CachedNetworkImage(
                                             fadeInDuration:
-                                                Duration(milliseconds: 500),
+                                                const Duration(milliseconds: 500),
                                             fadeOutDuration:
-                                                Duration(milliseconds: 500),
+                                                const Duration(milliseconds: 500),
                                             imageUrl: path,
                                             width: 300.0,
                                             fit: BoxFit.cover,
@@ -152,7 +150,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Text(
                               dateTimeFormat(
@@ -175,28 +173,28 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
           ),
         if (widget.message?.senderType != 'PARENT')
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
             child: Container(
               width: double.infinity,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: double.infinity,
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(0.0),
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: 500.0,
                       ),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).primary,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 3.0,
                             color: Color(0x33000000),
@@ -206,7 +204,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                             ),
                           )
                         ],
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(12.0),
                           bottomRight: Radius.circular(0.0),
                           topLeft: Radius.circular(12.0),
@@ -217,7 +215,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.end,
@@ -236,7 +234,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                             if (widget.message?.image != null &&
                                 widget.message?.image != '')
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 4.0),
                                 child: FlutterFlowMediaDisplay(
                                   path: widget.message!.image,
@@ -244,9 +242,9 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: CachedNetworkImage(
                                       fadeInDuration:
-                                          Duration(milliseconds: 500),
+                                          const Duration(milliseconds: 500),
                                       fadeOutDuration:
-                                          Duration(milliseconds: 500),
+                                          const Duration(milliseconds: 500),
                                       imageUrl: path,
                                       width: 300.0,
                                       fit: BoxFit.cover,
@@ -270,7 +268,7 @@ class _MessageComponentWidgetState extends State<MessageComponentWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                       child: Text(
                         dateTimeFormat('relative', widget.message!.timestamp!),
                         style: FlutterFlowTheme.of(context).labelSmall.override(
